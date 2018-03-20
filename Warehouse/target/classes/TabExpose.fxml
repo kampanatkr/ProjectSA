@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.TabExposeView">
+   <children>
+      <Label layoutX="88.0" layoutY="24.0" text="เลขที่เอกสาร">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="docNo" layoutX="209.0" layoutY="21.0" />
+      <Label layoutX="91.0" layoutY="57.0" text="วันที่เอกสาร">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="docDate" layoutX="209.0" layoutY="55.0" prefHeight="31.0" prefWidth="186.0" />
+      <Label layoutX="112.0" layoutY="98.0" text="ผู้เบิก">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="138.0" text="ผู้รับ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="174.0" text="หมายเหตุ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="note" layoutX="209.0" layoutY="174.0" prefHeight="31.0" prefWidth="328.0" />
+      <TableView fx:id="exposeTable" layoutX="84.0" layoutY="218.0" prefHeight="254.0" prefWidth="611.0">
+         <columns>
+            <TableColumn fx:id="orderColumn" prefWidth="75.0" text="ลำดับ" />
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="รหัส" />
+            <TableColumn fx:id="nameProductColumn" prefWidth="223.0" text="รายชื่อสินค้า" />
+            <TableColumn fx:id="amountColumn" minWidth="0.0" prefWidth="130.0" text="จำนวน(กิโลกรัม)" />
+            <TableColumn fx:id="stockColumn" prefWidth="107.0" text="เลขที่คลัง" />
+         </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="215.0" layoutY="482.0" mnemonicParsing="false" onAction="#handlerBtnAdd" text="เพิ่มรายการ" />
+      <Button fx:id="removeBtn" layoutX="294.0" layoutY="482.0" mnemonicParsing="false" onAction="#handlerBtnRemove" text="ลบรายการ" />
+      <Button fx:id="saveBtn" layoutX="373.0" layoutY="482.0" mnemonicParsing="false" onAction="#handlerBtnSave" text="บันทึกข้อมูล" />
+      <Button fx:id="cancelBtn" layoutX="456.0" layoutY="482.0" mnemonicParsing="false" onAction="#handlerBtnCancel" text="ล้างข้อมูล" />
+      <TextField fx:id="recorderField" layoutX="208.0" layoutY="95.0" prefHeight="31.0" prefWidth="190.0" />
+      <TextField fx:id="recipientField" layoutX="208.0" layoutY="134.0" prefHeight="31.0" prefWidth="190.0" />
+   </children>
+</AnchorPane>
